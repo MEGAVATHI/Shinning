@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import  React from'react'
+function Employee({obj,salary,mylist}){
+    return(
+        <div>
+        <p>Hi,{obj.name}! you got selected for {obj.role}</p>
+        <p>your monthly package is {salary}</p>
+        <p>Thanks</p>
+        <p>{mylist[1]}</p>
+        </div>
+    )
 }
-
-export default App;
+export default function App(){
+  return(
+    <div>
+    <Employee obj={{name:'Ram',role:'Web developer'}} salary={20000} mylist={['project Manager','Managing Director']}/>
+    </div>
+  )
+}
